@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste extra</title>
+</head>
+<body>
+        <h1>Verificador de Nacionalidade</h1> 
+        <p><label for="nasc">Você nasceu em: </label><input type="text" name="nasc" id="nasc">
+               <input type="button" value="verificar" onclick="verif()">
+        </p>
+        <div id="local"></div>
+
+        <script>
+            function verif(){
+                Vnasc = document.getElementById('nasc').value.trim().toLowerCase()
+                Vlocal = document.getElementById('local')
+                if (Vnasc == 'brasil'){
+                    Vlocal.innerHTML = 'Você é Brasileiro!'
+                }else{
+                    Vlocal.innerHTML = 'Você é Estrangeiro!'
+                }
+            }
+        </script>
+
+
+</body>
+</html>

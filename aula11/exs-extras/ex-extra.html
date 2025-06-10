@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício extra</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Digite a sua nota do bismestre:</h1>
+        <input type="number" name="nota1" id="nota1">   
+        <input type="button" value="enviar" id="b1">
+        <div id="resp1"></div>
+
+        <script>
+            var b = document.getElementById('b1')
+            b.addEventListener('click', clicou)
+            var nota = document.getElementById('nota1')
+
+            function clicou (){   
+                notaC = Number(nota.value)
+                var n = document.getElementById('resp1')
+
+                if (notaC > 7.0){
+                    n.innerText = `A sua nota é ${notaC}! Você passou! Parabéns!`
+                } else{
+                    n.innerText = `A sua nota é ${notaC}! Você foi reprovado.`
+                }
+            }
+
+        </script>
+</body>
+</html>

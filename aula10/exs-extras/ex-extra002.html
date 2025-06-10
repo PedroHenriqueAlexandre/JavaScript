@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de revisão 2</title>
+    <style>
+
+        body{
+            font:  Normal 20pt Arial;
+        }
+
+        div#area{
+            line-height: 200px;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+        <div id="area">
+            Interaja...
+        </div>
+        <script>
+            var a = document.getElementById('area')
+            a.addEventListener ('click', clicar)
+            a.addEventListener ('mouseenter', entrar)
+            addEventListener ('mouseout', sair)
+                function clicar() {
+                    a.innerText = 'Cliquei!'
+                    a.style.background = 'green'
+                }
+
+                function entrar(){
+                    a.innerText = 'Entrei!'
+                    a.style.background = 'pink'
+                }
+
+                function sair(){
+                    a.innerText = 'Saindo!'
+                    a.style.background = 'lightcoral'   
+                }
+        </script>     
+</body>
+</html>

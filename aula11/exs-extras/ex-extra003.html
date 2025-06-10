@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de valores</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Somando dois valores</h1>
+        <input type="number" name="valor1" id="valor1"> +
+        <input type="number" name="valor2" id="valor2">
+        <input type="button" value="verificar" onclick="clicar()">
+        <div id="r"></div>
+
+        <script>
+            function clicar(){
+                var res = document.getElementById('r')
+                var v1 = document.getElementById('valor1')
+                var v2 = document.getElementById('valor2')
+                var v1C = Number(v1.value)
+                var v2C = Number (v2.value)
+                S = v1C + v2C
+                res.innerText = `A soma entre ${v1C} e ${v2C} é de ${S}`
+            }
+
+        </script>
+</body>
+</html>
