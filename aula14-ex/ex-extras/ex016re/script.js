@@ -11,6 +11,7 @@ function contar (){
     }else if (pass.value.length == 0){
         window.alert('Valor inválido! Considerando PASSO 1.')
         passC = 1
+        res.innerHTML = 'Contando: <br>'
         while (startC < endC){
             res.innerHTML += `${startC}...`
             startC = startC + passC
@@ -20,7 +21,8 @@ function contar (){
             startC = startC - passC
         }
     }else{
-       while (startC <= endC){
+        res.innerHTML = 'Contando: <br>'
+       while (startC < endC){
             res.innerHTML += `${startC}...`
             startC = startC + passC
         }

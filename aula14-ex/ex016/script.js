@@ -9,9 +9,14 @@ function clicar (){
     res.style.padding = '10px'
     if (startC == 0 || endC == 0){
         res.innerHTML = `Impossivel contar!`
-    } else if (passoC == 0){
+    }else{
+        res.innerHTML = 'Contando: <br>'
+    }
+    
+     if (passoC == 0){
         window.alert ('O passo 0 é impossivel, o valor considerado será de 1.')
         passoC = 1
+        
         if (startC >= endC){
             while (startC >= endC){
             res.innerText += (`${startC}...`) 
@@ -24,6 +29,7 @@ function clicar (){
         } 
     }
     }else{
+        
         while (startC <= endC){
         res.innerText += (`${startC}...`) 
         startC = startC + passoC
